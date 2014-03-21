@@ -3,7 +3,7 @@ Startup Trends:
 
 Startup Trends is predictive analytics platform to visualize and analyze trends of startups across the world!
 
-# Features Planned:
+## Features Planned:
 
 ### Phase-1:
 
