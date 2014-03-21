@@ -21,14 +21,17 @@ public class TwitterSpout extends BaseRichSpout {
 	private SpoutOutputCollector collector = null;
 	private LinkedBlockingQueue<Status> tweetQueue = null;
 
+	private static String[] keywords = new String[] { "startup" };
+	private static final String field = "tweet";
+
 	public void open(Map conf, TopologyContext context,
 			SpoutOutputCollector collector) {
 		// TODO Auto-generated method stub
 		this.collector = collector;
 		this.tweetQueue = new LinkedBlockingQueue<Status>();
-		TwitterStreamer streamer = new TwitterStreamer(tweetQueue);
+		TwitterStreamer streamer = new TwitterStreamer(this.tweetQueue);
 		final FilterQuery filterQuery = new FilterQuery();
-		filterQuery.track(new String[] { "startup" });
+		filterQuery.track(this.keywords);
 		streamer.stream().filter(filterQuery);
 	}
 
@@ -43,7 +46,7 @@ public class TwitterSpout extends BaseRichSpout {
 
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 		// TODO Auto-generated method stub
-		declarer.declare(new Fields("tweet"));
+		declarer.declare(new Fields(this.field));
 	}
 
 }
