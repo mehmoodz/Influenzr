@@ -1,4 +1,4 @@
-package com.startups.trends.process;
+package com.startup.trends.process;
 
 public class SentimentClassifierBolt {
 
