@@ -5,15 +5,15 @@ Startup Trends is predictive analytics platform to visualize and analyze trends 
 
 # Features Planned:
 
-## Phase-1:
+### Phase-1:
 
 * Plot tweets realtime with keywords startups on the map
 * Score Sentiment
 * Top news based on retweets and mentions
 
-# Phase-2:
+### Phase-2:
 
-## Categorize:
+#### Categorize:
 
 * Articles
 * News
@@ -22,7 +22,7 @@ Startup Trends is predictive analytics platform to visualize and analyze trends 
 * Companies trending now in Startups
 
 
-## Behind the Wheels:
+### Behind the Wheels:
 
 * APACHE STORM
 * Twitter4j
@@ -31,7 +31,7 @@ Startup Trends is predictive analytics platform to visualize and analyze trends 
 * HighCharts
 * Maps (Google or MapBox)
 
-##References:
+### References:
 
 https://github.com/P7h/storm-camel-example (But Bolts used instead of Camel to publish to websockets)
 
