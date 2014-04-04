@@ -1,7 +1,7 @@
 Startup Trends:
 ==============
 
-Startup Trends simple tool visualize and analyze sentiments of startups across the world!
+Startup Trends simple tool to visualize and analyze sentiments of startups across the world!
 
 ## Features Planned:
 
