@@ -1,25 +1,13 @@
 Startup Trends:
 ==============
 
-Startup Trends is predictive analytics platform to visualize and analyze trends of startups across the world!
+Startup Trends simple tool visualize and analyze sentiments of startups across the world!
 
 ## Features Planned:
 
-### Phase-1:
-
 * Plot tweets realtime with keywords startups on the map
 * Score Sentiment
-* Top news based on retweets and mentions
 
-### Phase-2:
-
-#### Categorize:
-
-* Articles
-* News
-* Industry
-* Newsgroups
-* Companies trending now in Startups
 
 
 ### Behind the Wheels:
