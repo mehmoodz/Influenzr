@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Startup Trends</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+<button id="start">Start</button>&nbsp;
+<button id="stop">Stop</button>
+<div id="logs"></div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script>
+var socket = {
+        start: function () {
+            var location = "ws://localhost:8888/ws";
+            this._ws = new WebSocket(location);
+            this._ws.onmessage = this._onmessage;
+            this._ws.onclose = this._onclose;
+        },
+
+        _onmessage: function (m) {
+            if (m.data) {
+               $('#logs').append(m.data)
+            }
+        },
+
+        _onclose: function (m) {
+            if (this._ws) {
+                this._ws.close();
+            }
+        }
+    };
+
+    function stop() {
+        socket._onclose(null);
+    }
+
+    function start() {
+        socket.start();
+    }
+
+    $(function () {
+        $('#start').on('click', function (e) {
+            start();
+        });
+        $('#stop').on('click', function (e) {
+            stop();
+        });
+    });
+</script>
+
+</body>
+</html>

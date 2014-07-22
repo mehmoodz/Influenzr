@@ -8,6 +8,10 @@ import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichBolt;
 import backtype.storm.tuple.Tuple;
 
+/**
+ * @author mkhan
+ *
+ */
 public class StemmingBolt extends BaseRichBolt {
 
 	private static final long serialVersionUID = -4922677756054234041L;
@@ -19,6 +23,9 @@ public class StemmingBolt extends BaseRichBolt {
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see backtype.storm.task.IBolt#execute(backtype.storm.tuple.Tuple)
+	 */
 	public void execute(Tuple input) {
 		// TODO Auto-generated method stub
 	}

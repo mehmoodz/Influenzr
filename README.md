@@ -1,13 +1,7 @@
-Startup Trends:
-==============
+Influenzr:
+==========
 
-Startup Trends simple tool to visualize and analyze sentiments of startups across the world!
-
-## Features Planned:
-
-* Plot tweets realtime with keywords startups on the map
-* Score Sentiment
-
+Analyze Social Influencers based on or combinations of brand / category / geography etc., 
 
 
 ### Behind the Wheels:
@@ -15,11 +9,6 @@ Startup Trends simple tool to visualize and analyze sentiments of startups acros
 * APACHE STORM
 * Twitter4j
 * Python
-* HTML5 WebSockets
+* HTML5 WebSockets (Tornado)
 * HighCharts
 * Maps (Google or MapBox)
-
-### References:
-
-https://github.com/P7h/storm-camel-example (But Bolts used instead of Camel to publish to websockets)
-

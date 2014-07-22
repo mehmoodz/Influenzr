@@ -3,6 +3,9 @@ package com.startup.trends.source;
 import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import twitter4j.FilterQuery;
 import twitter4j.Status;
 import backtype.storm.spout.SpoutOutputCollector;
@@ -17,7 +20,7 @@ import com.startup.trends.vendor.TwitterStreamer;
 
 public class TwitterSpout extends BaseRichSpout {
 	private static final long serialVersionUID = 6652429357925759307L;
-
+	final static Logger log = LoggerFactory.getLogger(TwitterSpout.class);
 	private SpoutOutputCollector collector = null;
 	private LinkedBlockingQueue<Status> tweetQueue = null;
 
@@ -31,12 +34,14 @@ public class TwitterSpout extends BaseRichSpout {
 		this.tweetQueue = new LinkedBlockingQueue<Status>();
 		TwitterStreamer streamer = new TwitterStreamer(this.tweetQueue);
 		final FilterQuery filterQuery = new FilterQuery();
+		log.info("Listening to:",this.keywords);
 		filterQuery.track(this.keywords);
 		streamer.stream().filter(filterQuery);
 	}
 
 	public void nextTuple() {
 		// TODO Auto-generated method stub
+		log.info("Polling for next tuple...");
 		final Status status = this.tweetQueue.poll();
 		if (status == null) {
 			Utils.sleep(10000);
