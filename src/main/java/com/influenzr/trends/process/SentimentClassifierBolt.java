@@ -1,4 +1,4 @@
-package com.startup.trends.process;
+package com.influenzr.trends.process;
 
 /**
  * @author mkhan

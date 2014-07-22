@@ -1,4 +1,4 @@
-package com.startup.trends;
+package com.influenzr.trends;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

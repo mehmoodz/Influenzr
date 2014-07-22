@@ -20,9 +20,10 @@
       $message.text('open');
     };
     ws.onmessage = function(ev){
+    	$message.text(ev);
       $message.attr("class", 'label label-info');
-      $message.hide();
-      $message.fadeIn("slow");
+      //$message.hide();
+      //$message.fadeIn("slow");
       $message.text(ev.data);
 
       /* var json = JSON.parse(ev.data);

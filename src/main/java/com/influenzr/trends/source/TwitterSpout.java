@@ -1,4 +1,4 @@
-package com.startup.trends.source;
+package com.influenzr.trends.source;
 
 import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -16,7 +16,7 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
 import backtype.storm.utils.Utils;
 
-import com.startup.trends.vendor.TwitterStreamer;
+import com.influenzr.trends.vendor.TwitterStreamer;
 
 public class TwitterSpout extends BaseRichSpout {
 	private static final long serialVersionUID = 6652429357925759307L;

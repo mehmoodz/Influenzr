@@ -1,7 +1,9 @@
 from tornado import websocket, web, ioloop
 import json
+import storm
 
 cl = [] # this is for demo purposes, never ever use a global var in production!
+count=0
 
 class IndexHandler(web.RequestHandler):
     ''' index http normal handler'''
@@ -19,6 +21,11 @@ class SocketHandler(websocket.WebSocketHandler):
         ''' on close event, triggered once a connection is closed'''
         if self in cl:
             cl.remove(self)
+    
+	def push(self,message):
+		print message
+		self.write_message(message)
+		
 
 class ApiHandler(web.RequestHandler):
     ''' http async handler for api side'''
@@ -36,9 +43,16 @@ class ApiHandler(web.RequestHandler):
     def post(self):
         pass
 
+class TweetResponseSpout(storm.BasicBolt):
+	def process(self,tup):
+		countr=tup.values[0]
+		count=count+countr
+		socket.push(count)
+
+socket = SocketHandler
 app = web.Application([
     (r'/', IndexHandler),
-    (r'/ws', SocketHandler),
+    (r'/ws', socket),
     (r'/api', ApiHandler),
 ])
 

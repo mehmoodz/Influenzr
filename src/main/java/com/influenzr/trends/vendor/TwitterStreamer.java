@@ -1,4 +1,4 @@
-package com.startup.trends.vendor;
+package com.influenzr.trends.vendor;
 
 import java.util.concurrent.LinkedBlockingQueue;
 

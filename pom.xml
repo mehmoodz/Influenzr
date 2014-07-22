@@ -2,15 +2,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.data.analytics</groupId>
-	<artifactId>startup-trends</artifactId>
+	<groupId>com.influenzr</groupId>
+	<artifactId>influenzr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>startup-trends</name>
+	<name>influenzr</name>
 	<url>http://mehmoodbluffs.blogspot.com/</url>
 	<description>
-		Trend Analysis for Startup News From Twitter
+		Social Influencer Analyzer
 	</description>
 
 	<properties>

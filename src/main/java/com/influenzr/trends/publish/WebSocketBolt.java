@@ -1,4 +1,4 @@
-package com.startup.trends.publish;
+package com.influenzr.trends.publish;
 
 import java.util.Map;
 
@@ -12,7 +12,7 @@ public class WebSocketBolt extends ShellBolt implements IRichBolt{
 	
 	public WebSocketBolt() {
 		// TODO Auto-generated constructor stub
-		super("python","websocket.py");
+		super("python","websocket_test.py");
 	}
 
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {

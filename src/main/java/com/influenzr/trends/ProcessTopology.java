@@ -1,4 +1,4 @@
-package com.startup.trends;
+package com.influenzr.trends;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,9 +8,9 @@ import backtype.storm.LocalCluster;
 import backtype.storm.StormSubmitter;
 import backtype.storm.topology.TopologyBuilder;
 
-import com.startup.trends.process.TweetCounterBolt;
-import com.startup.trends.publish.WebSocketBolt;
-import com.startup.trends.source.TwitterSpout;
+import com.influenzr.trends.process.TweetCounterBolt;
+import com.influenzr.trends.publish.WebSocketBolt;
+import com.influenzr.trends.source.TwitterSpout;
 
 /**
  * @author mkhan
