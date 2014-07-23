@@ -43,7 +43,7 @@ class ApiHandler(web.RequestHandler):
     def post(self):
         pass
 
-class TweetResponseSpout(storm.BasicBolt):
+class PublishResultBolt(storm.BasicBolt):
 	def process(self,tup):
 		countr=tup.values[0]
 		print countr
@@ -57,6 +57,9 @@ app = web.Application([
     (r'/api', ApiHandler),
 ])
 
+PublishResultBolt().run()
+
 if __name__ == '__main__':
     app.listen(8888)
     ioloop.IOLoop.instance().start()
+    

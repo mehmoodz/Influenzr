@@ -34,6 +34,7 @@ public class TweetCounterBolt extends BaseRichBolt {
 
 	public void execute(Tuple input) {
 		// TODO Auto-generated method stub
+		log.info("Counting Tweets....");
 		final Status status = (Status) input.getValueByField("tweet");
 		if(status==null){
 			return;

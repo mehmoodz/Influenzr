@@ -12,7 +12,7 @@ public class WebSocketBolt extends ShellBolt implements IRichBolt{
 	
 	public WebSocketBolt() {
 		// TODO Auto-generated constructor stub
-		super("python","websocket_test.py");
+		super("python","publishresult.py");
 	}
 
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {

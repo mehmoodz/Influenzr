@@ -1,0 +1,55 @@
+<<<<<<< HEAD
+###########################
+# Eclipse generated files #
+###########################
+.metadata/
+.project
+.classpath
+.settings
+.checkstyle
+.externalToolBuilders
+bin/
+classes/
+
+#########################
+# Maven generated files #
+#########################
+target/
+lib/
+classes/
+
+######################
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+##########################
+# soapUI generated files #
+##########################
+soapui*.log
+global-groovy.log
+
+###########################
+# Other unnecessary files #
+###########################
+.swp
+.svn
+.checksum.txt
+.ignore-checksum.txt
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> 7d67ebd6ba1550492bf2b5b2fc35d6a18ee30334
